@@ -1,0 +1,24 @@
+{
+    "reviews" : [
+                   {
+                   "name" : "Intermediate Algebra",
+                   "id" : "MATH0312",
+                   "title" : "(Math 0312) Intermediate Algebra",
+                   "questions" : [
+                                  {
+                                  "qno": 1,
+                                  "qImgPath": "Q01-MATH0312.png",
+                                  "aImgPath": "A01-MATH0312.png",
+                                  "videoLink":"xx"
+                                  },
+                                  {
+                                  "qno": 2,
+                                  "qImgPath": "Q02-MATH0312.png",
+                                  "aImgPath": "A02-MATH0312.png",
+                                  "videoLink":"xx"
+                                  }
+                                  
+                    ]
+                   }
+                   ]
+}
