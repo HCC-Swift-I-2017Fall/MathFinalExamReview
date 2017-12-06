@@ -15,9 +15,8 @@ class VideoViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        //Use following to display video...
+        //Use following variable to display video...
         let videoLink = decodedReviews?.reviews[currentReviewIndex].questions[currentQuestionIndex].videoLink
-        
     }
 
 
