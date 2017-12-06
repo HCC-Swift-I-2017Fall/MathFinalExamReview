@@ -10,17 +10,54 @@ import UIKit
 
 class ReviewOverviewViewController: UIViewController {
 
+    @IBOutlet weak var startFinalReviewButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+        convertJSONintoStruct()
+
+        if (decodedReviews == nil) {
+            currentReviewIndex = CC_NONE_SELECTED
+            currentQuestionIndex = CC_NONE_SELECTED
+        } else {
+            currentReviewIndex = 0
+            currentQuestionIndex = 0
+        }
+        
+        //Format button's look and feel
+        actionButtonFormatting(button: startFinalReviewButton)
+        
+        //*** Testing ....
+        print(decodedReviews?.reviews[currentReviewIndex].questions[currentQuestionIndex].videoLink ?? "No data found! ERROR: ROC0100-Missing Data")
     }
 
+    /******************************************************************************
+     *** Method name  : convertJSONintoStruct
+     *** Description : This method will convert data in JSON file into a Struct
+     ***                that can be accessed in the app throughout
+     ******************************************************************************/
+    func convertJSONintoStruct() {
+        let filePath = Bundle.main.path(forResource: "finalreview0312", ofType:"json")
+        let jsonData = try! Data(contentsOf: URL(fileURLWithPath:filePath!), options: .uncached)
+
+        guard let decoded = try? JSONDecoder().decode(MathFinalReview.self, from: jsonData) else {
+            print("Could not convert JSON into Struct. Make sure .... \n1) JSON file has no extra or missing { or [ or ( \n2) JSON and 'MathFinalReview' Struct are matching. ERROR: MFR0100-JSON")
+            return
+        }
+        
+        decodedReviews = decoded        //story in the global variable
+    }
+    
     @IBAction func unwindToReviewOverview(unwindSegue: UIStoryboardSegue) {
         
     }
     
 
+    
     /*
     // MARK: - Navigation
 
@@ -32,3 +69,25 @@ class ReviewOverviewViewController: UIViewController {
     */
 
 }
+
+
+/*
+ // MARK: - Button Formatting
+*/
+/******************************************************************************
+ *** Method name  : actionButtonFormatting
+ *** Description : This method formats any UI button with ...
+ ***               rounded corner, border color and shadow
+ ******************************************************************************/
+func actionButtonFormatting(button: UIButton) {
+    button.layer.cornerRadius = 6
+    button.layer.borderWidth = 1
+    button.layer.borderColor = UIColor.darkGray.cgColor
+    button.layer.backgroundColor = UIColor.white.cgColor
+    
+    button.layer.shadowColor = UIColor.darkGray.cgColor
+    button.layer.shadowOffset = CGSize.init(width: 2, height: 2)
+    button.layer.shadowRadius = 6
+    button.layer.shadowOpacity = 0.7
+}
+

@@ -46,8 +46,8 @@ public struct Review: Codable {
  ***    It is Codable and used with JSON serialization
  ******************************************************************************/
 public struct Question : Codable {
-    public var no: Int
-    public var questionImagePath: String
-    public var answerImagePath: String
+    public var qno: Int
+    public var qImgPath: String
+    public var aImgPath: String
     public var videoLink: String
 }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Review Overview-->
         <scene sceneID="FmE-0b-mIU">
             <objects>
                 <viewController id="lWq-Zf-Quh" customClass="ReviewOverviewViewController" customModule="MathFinalExamReview" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,26 +18,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Review overview screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wi-76-Umk">
-                                <rect key="frame" x="67" y="156" width="177" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-mw-yz3">
-                                <rect key="frame" x="142" y="318" width="187" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Review"/>
-                                <connections>
-                                    <segue destination="BxS-kc-gfA" kind="show" id="m4y-HY-WkP"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="beI-0a-3v0">
+                                <rect key="frame" x="0.0" y="84" width="0.0" height="563"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate Algebra Final Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPf-0Y-elO">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="Ih6-5g-NHb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In this review, there is a set of 20 questinos, answers and video explanation" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlA-hc-smj">
+                                        <rect key="frame" x="0.0" y="25" width="0.0" height="488"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-mw-yz3">
+                                        <rect key="frame" x="0.0" y="513" width="0.0" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="gW3-Rd-saa"/>
+                                            <constraint firstAttribute="height" constant="50" id="wrC-9s-HO0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Start Final Review &gt;&gt;"/>
+                                        <connections>
+                                            <segue destination="BxS-kc-gfA" kind="show" id="m4y-HY-WkP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="beI-0a-3v0" firstAttribute="leading" secondItem="ni9-uE-ONA" secondAttribute="leading" constant="20" id="RH2-gd-L03"/>
+                            <constraint firstItem="ni9-uE-ONA" firstAttribute="trailing" secondItem="beI-0a-3v0" secondAttribute="trailing" constant="20" id="UGk-g2-gBA"/>
+                            <constraint firstItem="beI-0a-3v0" firstAttribute="top" secondItem="ni9-uE-ONA" secondAttribute="top" constant="20" id="btl-Lt-mbt"/>
+                            <constraint firstItem="ni9-uE-ONA" firstAttribute="bottom" secondItem="beI-0a-3v0" secondAttribute="bottom" constant="20" id="fEQ-iB-xtI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ni9-uE-ONA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="dYb-N2-lmo"/>
+                    <navigationItem key="navigationItem" title="Review Overview" largeTitleDisplayMode="always" id="dYb-N2-lmo"/>
+                    <connections>
+                        <outlet property="startFinalReviewButton" destination="mbl-mw-yz3" id="x5U-ik-tGw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUJ-vF-Prx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
