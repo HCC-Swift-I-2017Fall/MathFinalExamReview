@@ -22,16 +22,16 @@
                                 <rect key="frame" x="0.0" y="84" width="0.0" height="563"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate Algebra Final Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPf-0Y-elO">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="Ih6-5g-NHb"/>
+                                            <constraint firstAttribute="height" constant="40" id="bfj-mF-EaQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In this review, there is a set of 20 questinos, answers and video explanation" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlA-hc-smj">
-                                        <rect key="frame" x="0.0" y="25" width="0.0" height="488"/>
+                                        <rect key="frame" x="0.0" y="40" width="0.0" height="473"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -39,7 +39,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-mw-yz3">
                                         <rect key="frame" x="0.0" y="513" width="0.0" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="gW3-Rd-saa"/>
                                             <constraint firstAttribute="height" constant="50" id="wrC-9s-HO0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -118,11 +117,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsI-S5-nXl">
-                                <rect key="frame" x="139" y="526" width="151" height="72"/>
+                                <rect key="frame" x="149" y="360" width="151" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Show How"/>
                                 <connections>
-                                    <segue destination="xfT-1c-dak" kind="show" id="iRC-E7-cfo"/>
+                                    <action selector="videoExplanation:" destination="Xch-CK-Aen" eventType="touchUpInside" id="KPH-k4-xWd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,30 +133,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg7-7W-Tis" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4440.8000000000002" y="131.78410794602701"/>
-        </scene>
-        <!--Video View Controller-->
-        <scene sceneID="TPA-Vb-YqA">
-            <objects>
-                <viewController id="xfT-1c-dak" customClass="VideoViewController" customModule="MathFinalExamReview" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ihH-Mp-a3S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1w-e8-B58">
-                                <rect key="frame" x="35" y="146" width="262" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="cCi-Zw-mIz"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QIY-QG-exo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5319.1999999999998" y="131.78410794602701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vFj-jD-5XF">

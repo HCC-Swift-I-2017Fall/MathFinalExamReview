@@ -7,15 +7,37 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class AnswerViewController: UIViewController {
-
+    let avPlayerViewController = AVPlayerViewController()
+    var avPlayer: AVPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //Use following variable to display video...
+        let videoLink = decodedReviews?.reviews[currentReviewIndex].questions[currentQuestionIndex].videoLink
+
+        let movieUrl: NSURL? = NSURL(string: videoLink!)
+
+        if let url = movieUrl {
+            self.avPlayer = AVPlayer(url: url as URL)
+            self.avPlayerViewController.player = self.avPlayer
+        }
+        
     }
 
+    @IBAction func videoExplanation(_ sender: UIButton) {
+        self.present(self.avPlayerViewController, animated: true){
+            ()-> Void in self.avPlayerViewController.player?.play()
+        }
+    }
+    
+    
     @IBAction func unwindToAnswer(unwindSegue: UIStoryboardSegue) {
         
     }

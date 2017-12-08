@@ -19,7 +19,12 @@ class VideoViewController: UIViewController {
         let videoLink = decodedReviews?.reviews[currentReviewIndex].questions[currentQuestionIndex].videoLink
     }
 
-
+    @IBAction func videoCompleted(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "Answer2Video", sender: nil)
+        
+    }
+    
     /*
     // MARK: - Navigation
 
