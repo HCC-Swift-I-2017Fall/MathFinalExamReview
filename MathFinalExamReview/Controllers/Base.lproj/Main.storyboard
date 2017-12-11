@@ -103,7 +103,7 @@
                                     <constraint firstAttribute="width" constant="160" id="HWF-3r-SXI"/>
                                     <constraint firstAttribute="height" constant="60" id="w1w-zu-huO"/>
                                 </constraints>
-                                <state key="normal" title="SHOW ANSWER">
+                                <state key="normal" title="SHOW ANSWER ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -192,7 +192,7 @@
                                     <constraint firstAttribute="width" constant="200" id="rDq-f9-Phj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="VIDEO ANSWER" image="118621-32">
+                                <state key="normal" title=" VIDEO ANSWER" image="118621-32">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
