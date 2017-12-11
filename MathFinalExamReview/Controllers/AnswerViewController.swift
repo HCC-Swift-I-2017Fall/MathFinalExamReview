@@ -9,11 +9,21 @@
 import UIKit
 
 class AnswerViewController: UIViewController {
-
+    // VARS
+    var questionNumberOpt: Int?
+    
+    // OUTLETS
+    @IBOutlet weak var headerQuestionNumber: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if let questionNumber = questionNumberOpt {
+            headerQuestionNumber.text = "Here is the answer for question " + String(questionNumber)
+        
+        }
     }
 
     @IBAction func unwindToAnswer(unwindSegue: UIStoryboardSegue) {
