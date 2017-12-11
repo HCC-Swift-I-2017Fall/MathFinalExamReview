@@ -10,22 +10,45 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     //VARS
-    var questionNumberOpt: Int?
+    //var questionNumberOpt: Int?
     var totalQuestionsOpt: Int?
     
+    let questionNumber = decodedReviews?.reviews[currentReviewIndex].questions[currentQuestionIndex].qno
 
     // OUTLETS
     @IBOutlet weak var headerQuestionNumber: UILabel!
+    @IBOutlet weak var questionImage: UIImageView!
+    
+    @IBOutlet weak var showAnswer: UIButton!
+    
+    @IBOutlet weak var endButton: UIButton!
+    // Actions
+    @IBAction func nextQuestionButton(_ sender: UIButton) {
+        if currentQuestionIndex < ((decodedReviews?.reviews[currentReviewIndex].questions.count)! - 1){
+            currentQuestionIndex += 1
+            displayQuestionImage()
+        }
+    }
+    
+    @IBAction func previousQuestionButton(_ sender: UIButton) {
+        if currentQuestionIndex > 0 {
+            currentQuestionIndex -= 1
+            displayQuestionImage()
+        }
+    }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        questionNumberOpt = 1 // Set 1 just to test. Later: This var will receive a value from the previous controller through segue OR read from a data the number of the question the user has stopped. (use core data to persiste the data (?))
-        totalQuestionsOpt = 10 //Set 10 only to test. It will count the number of questions from the Json
         
-        guard let questionNumber = questionNumberOpt else {return}
-        guard let totalQuestions = totalQuestionsOpt else {return}
-        headerQuestionNumber.text = "Question " + String(questionNumber) + " of " + String(totalQuestions)
+        //Format button's look and feel
+        actionButtonFormatting(button: showAnswer)
+        actionButtonFormatting(button: endButton)
+        
+        displayQuestionImage()
+        
     }
 
     @IBAction func unwindToQuestion(unwindSegue: UIStoryboardSegue) {
@@ -41,12 +64,14 @@ class QuestionViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "toAnswerSegue" {
-            let avc = segue.destination as! AnswerViewController
-            avc.questionNumberOpt = questionNumberOpt
-        }
+    }
+    
+    func displayQuestionImage(){
+        headerQuestionNumber.text = "Question \((currentQuestionIndex) + 1) of \(decodedReviews?.reviews[currentReviewIndex].questions.count ?? 00)"
         
-        
+        guard let qimage = decodedReviews?.reviews[currentReviewIndex].questions[currentQuestionIndex].qImgPath else{return}
+        questionImage.image = UIImage(named: qimage)
+
     }
 
 

@@ -84,6 +84,9 @@
                                     <constraint firstAttribute="height" constant="48" id="XSx-VR-FME"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="118748-48Prev"/>
+                                <connections>
+                                    <action selector="previousQuestionButton:" destination="BxS-kc-gfA" eventType="touchUpInside" id="pzh-qP-KjL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOt-4N-foW">
                                 <rect key="frame" x="319" y="72" width="48" height="48"/>
@@ -92,8 +95,11 @@
                                     <constraint firstAttribute="width" constant="48" id="ldp-uC-xYm"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="118748-48Next"/>
+                                <connections>
+                                    <action selector="nextQuestionButton:" destination="BxS-kc-gfA" eventType="touchUpInside" id="d16-tO-Vqt"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question1.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="9of-hz-X8Q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question12.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="9of-hz-X8Q">
                                 <rect key="frame" x="16" y="128" width="343" height="447"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-YC-EUN">
@@ -104,7 +110,7 @@
                                     <constraint firstAttribute="height" constant="60" id="w1w-zu-huO"/>
                                 </constraints>
                                 <state key="normal" title="SHOW ANSWER ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="Xch-CK-Aen" kind="show" identifier="toAnswerSegue" id="032-Tv-Lx9"/>
@@ -119,7 +125,7 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="END">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question N of M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHY-BU-1Vu">
@@ -157,7 +163,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="HCC Final Exam Review" id="mIt-e0-jRy"/>
                     <connections>
+                        <outlet property="endButton" destination="33o-yH-saK" id="9LQ-ng-DXJ"/>
                         <outlet property="headerQuestionNumber" destination="RHY-BU-1Vu" id="Z5V-qH-6Y3"/>
+                        <outlet property="questionImage" destination="9of-hz-X8Q" id="AKW-MR-DA6"/>
+                        <outlet property="showAnswer" destination="Tf6-YC-EUN" id="HKb-9e-FWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mG-Fw-DGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,6 +226,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="HCC Final Exam Review" id="eao-a0-COn"/>
                     <connections>
+                        <outlet property="answerImage" destination="lKC-iO-ZT9" id="c1Y-59-NT0"/>
                         <outlet property="headerQuestionNumber" destination="Uxf-Rk-NOC" id="UPg-rd-sUV"/>
                     </connections>
                 </viewController>
@@ -271,7 +281,7 @@
         <image name="118621-32" width="32" height="32"/>
         <image name="118748-48Next" width="48" height="48"/>
         <image name="118748-48Prev" width="48" height="48"/>
-        <image name="question1.PNG" width="960" height="720"/>
+        <image name="question12.PNG" width="960" height="720"/>
         <image name="questionAnswer1.PNG" width="960" height="720"/>
     </resources>
 </document>
