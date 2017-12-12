@@ -83,7 +83,8 @@ func actionButtonFormatting(button: UIButton) {
     button.layer.cornerRadius = 6
     button.layer.borderWidth = 1
     button.layer.borderColor = UIColor.darkGray.cgColor
-    button.layer.backgroundColor = UIColor.white.cgColor
+    button.layer.backgroundColor = UIColor.blue.cgColor
+    button.setTitleColor(UIColor.white, for: .normal)
     
     button.layer.shadowColor = UIColor.darkGray.cgColor
     button.layer.shadowOffset = CGSize.init(width: 2, height: 2)

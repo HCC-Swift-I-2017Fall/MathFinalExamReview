@@ -109,8 +109,9 @@
                                     <constraint firstAttribute="width" constant="160" id="HWF-3r-SXI"/>
                                     <constraint firstAttribute="height" constant="60" id="w1w-zu-huO"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="SHOW ANSWER ">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Xch-CK-Aen" kind="show" identifier="toAnswerSegue" id="032-Tv-Lx9"/>
@@ -123,9 +124,10 @@
                                     <constraint firstAttribute="width" constant="80" id="83u-hJ-cBf"/>
                                     <constraint firstAttribute="height" constant="60" id="cgJ-nI-Dyw"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="END">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question N of M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHY-BU-1Vu">
@@ -200,12 +202,12 @@
                                     <constraint firstAttribute="height" constant="60" id="RsW-hf-aHl"/>
                                     <constraint firstAttribute="width" constant="200" id="rDq-f9-Phj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title=" VIDEO ANSWER" image="118621-32">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title=" VIDEO ANSWER">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xfT-1c-dak" kind="show" id="iRC-E7-cfo"/>
+                                    <action selector="videoExplanation:" destination="Xch-CK-Aen" eventType="touchUpInside" id="iqM-ST-rJF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -228,35 +230,12 @@
                     <connections>
                         <outlet property="answerImage" destination="lKC-iO-ZT9" id="c1Y-59-NT0"/>
                         <outlet property="headerQuestionNumber" destination="Uxf-Rk-NOC" id="UPg-rd-sUV"/>
+                        <outlet property="videoAnswerButton" destination="QsI-S5-nXl" id="Sxb-SF-lL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg7-7W-Tis" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4440.8000000000002" y="131.78410794602701"/>
-        </scene>
-        <!--Video View Controller-->
-        <scene sceneID="TPA-Vb-YqA">
-            <objects>
-                <viewController id="xfT-1c-dak" customClass="VideoViewController" customModule="MathFinalExamReview" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ihH-Mp-a3S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1w-e8-B58">
-                                <rect key="frame" x="35" y="146" width="262" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="cCi-Zw-mIz"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QIY-QG-exo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5319.1999999999998" y="131.78410794602701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vFj-jD-5XF">
@@ -278,7 +257,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="118621-32" width="32" height="32"/>
         <image name="118748-48Next" width="48" height="48"/>
         <image name="118748-48Prev" width="48" height="48"/>
         <image name="question12.PNG" width="960" height="720"/>
