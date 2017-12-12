@@ -27,6 +27,7 @@ class AnswerViewController: UIViewController {
         
         // Do any additional setup after loading the view.
 
+
         displayAnswerImage()
 
         
@@ -46,6 +47,8 @@ class AnswerViewController: UIViewController {
         
     }
     
+
+
     @IBAction func videoExplanation(_ sender: UIButton) {
         self.present(self.avPlayerViewController, animated: true){
             ()-> Void in self.avPlayerViewController.player?.play()

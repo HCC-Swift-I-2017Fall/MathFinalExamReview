@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9B304F091FD753530035781E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B304F081FD753530035781E /* QuestionViewController.swift */; };
 		9B304F0B1FD753620035781E /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B304F0A1FD753620035781E /* AnswerViewController.swift */; };
-		9B304F0D1FD7536E0035781E /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B304F0C1FD7536E0035781E /* VideoViewController.swift */; };
 		9B304F2F1FD757FF0035781E /* ReviewOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B304F2E1FD757FF0035781E /* ReviewOverviewViewController.swift */; };
 		9B39EA981FD0A6BC00A3825D /* finalreview0312.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B39EA971FD0A6BC00A3825D /* finalreview0312.json */; };
 		9B39EA9A1FD0A71C00A3825D /* MathFinalReviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39EA991FD0A71C00A3825D /* MathFinalReviewDataModel.swift */; };
@@ -63,7 +62,6 @@
 /* Begin PBXFileReference section */
 		9B304F081FD753530035781E /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		9B304F0A1FD753620035781E /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
-		9B304F0C1FD7536E0035781E /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		9B304F2E1FD757FF0035781E /* ReviewOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOverviewViewController.swift; sourceTree = "<group>"; };
 		9B39EA971FD0A6BC00A3825D /* finalreview0312.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = finalreview0312.json; sourceTree = "<group>"; };
 		9B39EA991FD0A71C00A3825D /* MathFinalReviewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathFinalReviewDataModel.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				9B304F2E1FD757FF0035781E /* ReviewOverviewViewController.swift */,
 				9B304F081FD753530035781E /* QuestionViewController.swift */,
 				9B304F0A1FD753620035781E /* AnswerViewController.swift */,
-				9B304F0C1FD7536E0035781E /* VideoViewController.swift */,
 				9BBBC7051FD09DAA00F364E3 /* LaunchScreen.storyboard */,
 			);
 			path = Controllers;
@@ -356,7 +353,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B39EA9A1FD0A71C00A3825D /* MathFinalReviewDataModel.swift in Sources */,
-				9B304F0D1FD7536E0035781E /* VideoViewController.swift in Sources */,
 				9B304F2F1FD757FF0035781E /* ReviewOverviewViewController.swift in Sources */,
 				9B304F091FD753530035781E /* QuestionViewController.swift in Sources */,
 				9BE81C321FD0B0230097A943 /* GlobalConstantsVariables.swift in Sources */,
