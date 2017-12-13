@@ -28,6 +28,15 @@ class ReviewOverviewViewController: UIViewController {
             currentQuestionIndex = 0
         }
         
+        
+        let max_index = (decodedReviews?.reviews[currentReviewIndex].questions.count)!
+        
+        for i in 0...(max_index-1) {
+            attemptedQuestions.append(attempted.NOT_ATTEMPTED)
+        }
+
+        
+        
         //Format button's look and feel
         actionButtonFormatting(button: startFinalReviewButton)
         
@@ -83,7 +92,8 @@ func actionButtonFormatting(button: UIButton) {
     button.layer.cornerRadius = 6
     button.layer.borderWidth = 1
     button.layer.borderColor = UIColor.darkGray.cgColor
-    button.layer.backgroundColor = UIColor.blue.cgColor
+    //button.layer.backgroundColor = UIColor.blue.cgColor
+    button.layer.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0).cgColor
     button.setTitleColor(UIColor.white, for: .normal)
     
     button.layer.shadowColor = UIColor.darkGray.cgColor

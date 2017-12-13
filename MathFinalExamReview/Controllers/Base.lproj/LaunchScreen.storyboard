@@ -24,7 +24,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash512x512" translatesAutoresizingMaskIntoConstraints="NO" id="yXg-FQ-fiO">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash512x512" translatesAutoresizingMaskIntoConstraints="NO" id="yXg-FQ-fiO">
                                 <rect key="frame" x="31" y="176.5" width="312" height="312"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="312" id="9gg-m3-mPX"/>

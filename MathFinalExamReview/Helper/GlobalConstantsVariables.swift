@@ -23,10 +23,34 @@ var currentQuestionIndex : Int = CC_NONE_SELECTED //Points to current question n
 
 var decodedReviews : MathFinalReview?
 
+var attemptedQuestions: [attempted] = []
 
-
-public func something() {
-    
-    //decodedReviews?.reviews[currentReviewIndex].questions[currentQuestionIndex].videoLink
-
+enum attempted {
+    case NOT_ATTEMPTED
+    case CORRECT
+    case INCORRECT
 }
+
+
+var numberOfNotAttempted: Int = 0
+var numberOfCorrect: Int = 0
+var numberOfIncorrect: Int = 0
+
+func updateValuesAttemptedCorrectIncorrect(){
+    numberOfNotAttempted = 0
+    numberOfCorrect = 0
+    numberOfIncorrect = 0
+    
+    let max_index = (decodedReviews?.reviews[currentReviewIndex].questions.count)!
+    
+    for i in 0...(max_index-1) {
+        switch attemptedQuestions[i] {
+        case attempted.NOT_ATTEMPTED: numberOfNotAttempted += 1
+        case attempted.CORRECT: numberOfCorrect += 1
+        case attempted.INCORRECT: numberOfIncorrect += 1
+            
+        }
+    }
+    
+}
+
