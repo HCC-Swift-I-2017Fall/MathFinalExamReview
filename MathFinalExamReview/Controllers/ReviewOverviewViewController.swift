@@ -20,6 +20,21 @@ class ReviewOverviewViewController: UIViewController {
 
         convertJSONintoStruct()
 
+        startNewReview()
+        
+        //Format button's look and feel
+        actionButtonFormatting(button: startFinalReviewButton)
+        
+    }
+    
+    /******************************************************************************
+     *** Method name  : startNewReview()
+     *** Description : This method will resets all variables for starting of a new
+     ***                review. It is called when app starts and also when End Review
+     ***                is clicked
+     ******************************************************************************/
+    func startNewReview() {
+        
         if (decodedReviews == nil) {
             currentReviewIndex = CC_NONE_SELECTED
             currentQuestionIndex = CC_NONE_SELECTED
@@ -28,20 +43,14 @@ class ReviewOverviewViewController: UIViewController {
             currentQuestionIndex = 0
         }
         
+        let totalQuestions = (decodedReviews?.reviews[currentReviewIndex].questions.count)!
         
-        let max_index = (decodedReviews?.reviews[currentReviewIndex].questions.count)!
+        attemptedQuestions = []
         
-        for i in 0...(max_index-1) {
+        for _ in 0...(totalQuestions - 1) {
             attemptedQuestions.append(attempted.NOT_ATTEMPTED)
         }
 
-        
-        
-        //Format button's look and feel
-        actionButtonFormatting(button: startFinalReviewButton)
-        
-        //*** Testing ....
-        print(decodedReviews?.reviews[currentReviewIndex].questions[currentQuestionIndex].videoLink ?? "No data found! ERROR: ROC0100-Missing Data")
     }
 
     /******************************************************************************
@@ -61,8 +70,16 @@ class ReviewOverviewViewController: UIViewController {
         decodedReviews = decoded        //story in the global variable
     }
     
+    
+    /******************************************************************************
+     *** Action name  : unwind
+     *** Description : Called after Finish/End Review controller unwinds
+     ******************************************************************************/
     @IBAction func unwindToReviewOverview(unwindSegue: UIStoryboardSegue) {
+        //Only 'Finish Review view controller does unwind to
+        //Reset all review progress tracking variables to make it like a fresh start
         
+        startNewReview()
     }
     
 
@@ -93,7 +110,7 @@ func actionButtonFormatting(button: UIButton) {
     button.layer.borderWidth = 1
     button.layer.borderColor = UIColor.darkGray.cgColor
     //button.layer.backgroundColor = UIColor.blue.cgColor
-    button.layer.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0).cgColor
+    button.layer.backgroundColor = UIColor(red: 51/255, green: 153/255, blue: 102/255, alpha: 1.0).cgColor
     button.setTitleColor(UIColor.white, for: .normal)
     
     button.layer.shadowColor = UIColor.darkGray.cgColor

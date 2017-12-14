@@ -32,25 +32,3 @@ enum attempted {
 }
 
 
-var numberOfNotAttempted: Int = 0
-var numberOfCorrect: Int = 0
-var numberOfIncorrect: Int = 0
-
-func updateValuesAttemptedCorrectIncorrect(){
-    numberOfNotAttempted = 0
-    numberOfCorrect = 0
-    numberOfIncorrect = 0
-    
-    let max_index = (decodedReviews?.reviews[currentReviewIndex].questions.count)!
-    
-    for i in 0...(max_index-1) {
-        switch attemptedQuestions[i] {
-        case attempted.NOT_ATTEMPTED: numberOfNotAttempted += 1
-        case attempted.CORRECT: numberOfCorrect += 1
-        case attempted.INCORRECT: numberOfIncorrect += 1
-            
-        }
-    }
-    
-}
-

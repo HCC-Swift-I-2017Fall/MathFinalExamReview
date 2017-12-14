@@ -22,6 +22,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var showAnswer: UIButton!
     
     @IBOutlet weak var endButton: UIButton!
+
+    
     // Actions
     @IBAction func nextQuestionButton(_ sender: UIButton) {
         if currentQuestionIndex < ((decodedReviews?.reviews[currentReviewIndex].questions.count)! - 1){
@@ -37,8 +39,10 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    
-    
+    @IBAction func endReview(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueFinishReview", sender: self)
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

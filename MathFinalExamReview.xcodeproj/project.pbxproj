@@ -52,6 +52,7 @@
 		9B63937D1FD78F49006CA5DB /* questionAnswer7.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9B6393551FD78F48006CA5DB /* questionAnswer7.PNG */; };
 		9B63937E1FD78F49006CA5DB /* question17.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9B6393561FD78F48006CA5DB /* question17.PNG */; };
 		9B63937F1FD78F49006CA5DB /* question20.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9B6393571FD78F48006CA5DB /* question20.PNG */; };
+		9B76174A1FE1EDDC00319116 /* EndReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7617491FE1EDDC00319116 /* EndReviewViewController.swift */; };
 		9BBBC6FD1FD09DAA00F364E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBBC6FC1FD09DAA00F364E3 /* AppDelegate.swift */; };
 		9BBBC7021FD09DAA00F364E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BBBC7001FD09DAA00F364E3 /* Main.storyboard */; };
 		9BBBC7041FD09DAA00F364E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BBBC7031FD09DAA00F364E3 /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		9B6393551FD78F48006CA5DB /* questionAnswer7.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionAnswer7.PNG; sourceTree = "<group>"; };
 		9B6393561FD78F48006CA5DB /* question17.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question17.PNG; sourceTree = "<group>"; };
 		9B6393571FD78F48006CA5DB /* question20.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question20.PNG; sourceTree = "<group>"; };
+		9B7617491FE1EDDC00319116 /* EndReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndReviewViewController.swift; sourceTree = "<group>"; };
 		9BBBC6F91FD09DAA00F364E3 /* MathFinalExamReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathFinalExamReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBBC6FC1FD09DAA00F364E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BBBC7011FD09DAA00F364E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				9BBBC7001FD09DAA00F364E3 /* Main.storyboard */,
+				9B7617491FE1EDDC00319116 /* EndReviewViewController.swift */,
 				9B304F2E1FD757FF0035781E /* ReviewOverviewViewController.swift */,
 				9B304F081FD753530035781E /* QuestionViewController.swift */,
 				9B304F0A1FD753620035781E /* AnswerViewController.swift */,
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B76174A1FE1EDDC00319116 /* EndReviewViewController.swift in Sources */,
 				9B39EA9A1FD0A71C00A3825D /* MathFinalReviewDataModel.swift in Sources */,
 				9B304F2F1FD757FF0035781E /* ReviewOverviewViewController.swift in Sources */,
 				9B304F091FD753530035781E /* QuestionViewController.swift in Sources */,
@@ -495,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZFJ8KCA7SY;
 				INFOPLIST_FILE = MathFinalExamReview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -511,7 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZFJ8KCA7SY;
 				INFOPLIST_FILE = MathFinalExamReview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
