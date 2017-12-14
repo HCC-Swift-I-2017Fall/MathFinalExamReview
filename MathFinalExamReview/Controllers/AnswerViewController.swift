@@ -25,7 +25,7 @@ class AnswerViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let font = UIFont.systemFont(ofSize: 20)
+        let font = UIFont.systemFont(ofSize: 15)
         attemptedState.setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
 
         self.title = "Answer Number \(currentQuestionIndex + 1)"
@@ -59,10 +59,10 @@ class AnswerViewController: UIViewController {
    
     @IBAction func attempetedAction(_ sender: UISegmentedControl) {
          switch sender.selectedSegmentIndex {
-        case 0: attemptedQuestions[currentQuestionIndex] = attempted.NOT_ATTEMPTED
-        case 1: attemptedQuestions[currentQuestionIndex] = attempted.CORRECT
-        case 2: attemptedQuestions[currentQuestionIndex] = attempted.INCORRECT
-        default: attemptedQuestions[currentQuestionIndex] = attempted.NOT_ATTEMPTED
+            case 0: attemptedQuestions[currentQuestionIndex] = attempted.NOT_ATTEMPTED
+            case 1: attemptedQuestions[currentQuestionIndex] = attempted.CORRECT
+            case 2: attemptedQuestions[currentQuestionIndex] = attempted.INCORRECT
+            default: attemptedQuestions[currentQuestionIndex] = attempted.NOT_ATTEMPTED
         }
 
     }

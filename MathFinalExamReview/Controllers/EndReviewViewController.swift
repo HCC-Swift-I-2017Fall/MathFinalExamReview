@@ -26,8 +26,6 @@ class EndReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("********* End of Review ***********")
-        
         // Do any additional setup after loading the view.
 
         updateValuesAttemptedCorrectIncorrect()
@@ -36,8 +34,6 @@ class EndReviewViewController: UIViewController {
         attemptedQuestionsLabel.text = String(totalQuestions - numberOfNotAttempted)
         correctAnswersLabel.text = String(numberOfCorrect)
         incorrectAnswerLabel.text = String(numberOfIncorrect)
-        
-        print("Double(numberOfCorrect * 100 / totalQuestions) = \(Double(numberOfCorrect * 100 / totalQuestions))")
         
         if (Double(numberOfCorrect * 100 / totalQuestions) < 50) {
             messageLabel.text = "You could do better"

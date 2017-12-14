@@ -12,6 +12,7 @@ class ReviewOverviewViewController: UIViewController {
 
     @IBOutlet weak var startFinalReviewButton: UIButton!
     
+    @IBOutlet weak var aboutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,19 @@ class ReviewOverviewViewController: UIViewController {
         //Format button's look and feel
         actionButtonFormatting(button: startFinalReviewButton)
         
+        //have different formatting for About button
+        aboutButton.layer.cornerRadius = 6
+        aboutButton.layer.borderWidth = 0
+        aboutButton.layer.backgroundColor = UIColor.lightGray.cgColor
+        //aboutButton.setTitleColor(UIColor.white, for: .normal)
+
+        aboutButton.layer.shadowColor = UIColor.darkGray.cgColor
+        aboutButton.layer.shadowOffset = CGSize.init(width: 2, height: 2)
+        aboutButton.layer.shadowRadius = 4
+        aboutButton.layer.shadowOpacity = 0.5
+
+
+
     }
     
     /******************************************************************************
@@ -110,8 +124,9 @@ func actionButtonFormatting(button: UIButton) {
     button.layer.borderWidth = 1
     button.layer.borderColor = UIColor.darkGray.cgColor
     //button.layer.backgroundColor = UIColor.blue.cgColor
-    button.layer.backgroundColor = UIColor(red: 51/255, green: 153/255, blue: 102/255, alpha: 1.0).cgColor
-    button.setTitleColor(UIColor.white, for: .normal)
+    
+    button.layer.backgroundColor = UIColor(red: 215/255, green: 222/255, blue: 240/255, alpha: 1.0).cgColor
+    //button.setTitleColor(UIColor.white, for: .normal)
     
     button.layer.shadowColor = UIColor.darkGray.cgColor
     button.layer.shadowOffset = CGSize.init(width: 2, height: 2)

@@ -18,11 +18,13 @@ class QuestionViewController: UIViewController {
     // OUTLETS
     @IBOutlet weak var headerQuestionNumber: UILabel!
     @IBOutlet weak var questionImage: UIImageView!
-    
     @IBOutlet weak var showAnswer: UIButton!
-    
     @IBOutlet weak var endButton: UIButton!
-
+    @IBOutlet weak var nextQuestion: UIButton!
+    @IBOutlet weak var previousQuestion: UIButton!
+    
+    
+    
     
     // Actions
     @IBAction func nextQuestionButton(_ sender: UIButton) {
@@ -43,6 +45,8 @@ class QuestionViewController: UIViewController {
         performSegue(withIdentifier: "segueFinishReview", sender: self)
 
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,11 +75,22 @@ class QuestionViewController: UIViewController {
     }
     
     func displayQuestionImage(){
-        headerQuestionNumber.text = "Question \((currentQuestionIndex) + 1) of \(decodedReviews?.reviews[currentReviewIndex].questions.count ?? 00)"
+        headerQuestionNumber.text = "Question \((currentQuestionIndex) + 1) of \(decodedReviews?.reviews[currentReviewIndex].questions.count ?? 0)"
         
         guard let qimage = decodedReviews?.reviews[currentReviewIndex].questions[currentQuestionIndex].qImgPath else{return}
         questionImage.image = UIImage(named: qimage)
 
+        if currentQuestionIndex == 0 {
+            previousQuestion.isHidden = true
+        } else {
+            previousQuestion.isHidden = false
+        }
+        
+        if currentQuestionIndex == ((decodedReviews?.reviews[currentReviewIndex].questions.count)! - 1) {
+            nextQuestion.isHidden = true
+        } else {
+            nextQuestion.isHidden = false
+        }
     }
 
 
