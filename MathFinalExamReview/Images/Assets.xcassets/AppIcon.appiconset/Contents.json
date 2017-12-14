@@ -80,19 +80,19 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "AppIcon152x152.gif",
+      "filename" : "AppIcon152x152.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "AppIcon167x167.gif",
+      "filename" : "AppIcon167x167.png",
       "scale" : "2x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "AppStoreIcon1024x1024.gif",
+      "filename" : "AppStoreIcon1024x1024.png",
       "scale" : "1x"
     }
   ],

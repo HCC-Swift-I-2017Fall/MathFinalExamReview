@@ -30,7 +30,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxN-b4-6Oh">
                                 <rect key="frame" x="10" y="145" width="355" height="368"/>
-                                <mutableString key="text">Prepare yourself before final exam of Intermediate Algebra (0312).  In this review, you will questions about solving certain formulas, simplify equations etc.  Review has 20 questions. For each question, there is answer provided.  For each answer, there is associated video examplanation of the answer.  Good Luck!!</mutableString>
+                                <string key="text">Prepare yourself before final exam of Intermediate Algebra (0312).  In this review, you will questions about solving certain formulas, simplify equations etc.  Review has 20 questions. For each question, there is answer provided.  For each answer, there is associated video examplanation of the answer.  Good Luck!!</string>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUJ-vF-Prx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2883" y="132"/>
+            <point key="canvasLocation" x="2711" y="132"/>
         </scene>
         <!--Final Exam Review-->
         <scene sceneID="JTr-vT-lW5">
@@ -207,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mG-Fw-DGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3919.1999999999998" y="131.78410794602701"/>
+            <point key="canvasLocation" x="4286" y="132"/>
         </scene>
         <!--Final Exam Review-->
         <scene sceneID="rqM-pP-vOl">
@@ -276,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg7-7W-Tis" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4414" y="132"/>
+            <point key="canvasLocation" x="5046" y="132"/>
         </scene>
         <!--End Review View Controller-->
         <scene sceneID="ej3-O9-XxJ">
@@ -444,7 +444,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1Z-ZR-6aZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6us-IM-s2S" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3919" y="913"/>
+            <point key="canvasLocation" x="4286" y="913"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NW3-ub-soY">
@@ -462,7 +462,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6YC-pP-W5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3418" y="132"/>
+            <point key="canvasLocation" x="3516" y="132"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="SHy-ZN-OJh">
@@ -618,7 +618,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fR9-py-ZdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="yzQ-Qz-ygP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2883" y="913"/>
+            <point key="canvasLocation" x="2710" y="913"/>
         </scene>
     </scenes>
     <resources>
